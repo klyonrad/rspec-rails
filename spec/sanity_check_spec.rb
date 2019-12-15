@@ -17,7 +17,7 @@ RSpec.describe "Verify required rspec dependencies" do
     end
     FileUtils.chmod 0777, script
 
-    Bundler.with_clean_env do
+    Bundler.with_unbundled_env do
       expect(`bundle exec #{script} 2>&1`).
         to match(/uninitialized constant RSpec::Support/).
         or match(/undefined method `require_rspec_core' for RSpec::Support:Module/)
@@ -38,7 +38,7 @@ RSpec.describe "Verify required rspec dependencies" do
     end
     FileUtils.chmod 0777, script
 
-    Bundler.with_clean_env do
+    Bundler.with_unbundled_env do
       expect(`bundle exec #{script} 2>&1`).to be_empty
       expect($?.exitstatus).to eq(0)
     end
