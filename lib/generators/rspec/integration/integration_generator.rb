@@ -10,6 +10,8 @@ module Rspec
                    default: true,
                    desc: "Generate request specs"
 
+      source_paths << File.expand_path('../request/templates', __dir__)
+
       def generate_request_spec
         return unless options[:request_specs]
 
