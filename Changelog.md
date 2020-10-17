@@ -19,6 +19,12 @@ Bug Fixes:
 * Remove old #fixture_path feature detection code which broke under newer Rails.
   (Koen Punt, Jon Rowe, #2370)
 
+Deprecations:
+
+* Deprecates integration spec generator (`rspec:integration`)
+  which was an alias of request spec generator (`rspec:request`)
+  (Luka Lüdicke, #2374)
+
 ### 4.0.1 / 2020-05-16
 [Full Changelog](https://github.com/rspec/rspec-rails/compare/v4.0.0...v4.0.1)
 
